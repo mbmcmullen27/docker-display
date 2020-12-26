@@ -1,0 +1,16 @@
+version: "3.8"
+services:
+  web:
+    build: .
+    ports:
+      - "3000:3000"
+      - "9000:9000"
+  mosquitto:
+    image: "eclipse-mosquitto"
+    ports:
+      -  "1883:1883"
+      -  "8883:8883"
+    volumes:
+      -  ./mqtt_config/mosquitto.conf:/mosquitto/config/mosquitto.conf
+      -  /mosquitto/data
+      -  /mosquitto/log
