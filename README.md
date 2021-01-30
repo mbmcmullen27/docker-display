@@ -26,3 +26,6 @@ Seems like this line in App.js is pulling a lot of weight. Some things to look i
 ```jsx
   const [mesg, setMesg] = useState(<Fragment><em>nothing glubbed...</em></Fragment>);
 ```
+
+## MQTT client/snackbar
+* completed this fragment into a full component

@@ -45,7 +45,7 @@ export default class SnackBar extends React.Component {
         // After 3 seconds, remove the show class from DIV
         setTimeout(function(){ toast.className = toast.className.replace("show", ""); }, 3000);;
     
-      };
+    };
     
     render(){
         const { note } = this.state
