@@ -15,11 +15,11 @@ var client = new Twitter({
     access_token_secret: 'ewp8sWFnm105ITbxG7ldeohW3jP7SguvvCnxCGg6lZeMn'
 });
 
-app.get("/bbcmicro", function(req, res, next) {
+app.get("/top/:user", function(req, res, next) {
     //var client = util.pixelSearch();
     let prompt = req.query.prompt
-    let query = 'from:bbcmicrobot'
-    if(prompt) query = `#${prompt} AND ${query}`;
+    let query = `from:${req.params.user}`
+    if(prompt) query = `${prompt} AND ${query}`;
 
     client.get('search/tweets',{q:query,count:10}, 
         function(error, tweets, response) {
