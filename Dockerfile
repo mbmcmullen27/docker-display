@@ -1,9 +1,4 @@
-FROM alpine:3.11
-
-RUN apk update && apk upgrade 
-
-RUN apk add nodejs
-RUN apk add npm
+FROM node:14-alpine
 
 WORKDIR /home
 
