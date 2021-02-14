@@ -9,7 +9,7 @@ export default class SnackBar extends React.Component {
         super(props);
         this.state = {
             note: '',
-            client: new Paho.Client('localhost', 8883, 'glub01')
+            client: new Paho.Client('localhost', 1883, 'glub01')
         }
 
        this.onConnect = this.onConnect.bind(this);
